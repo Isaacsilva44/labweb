@@ -1,12 +1,11 @@
 import './styles.css';
-import { ReactComponent as MainImage   } from 'assets/Images/main-image.svg';
-import Navbar from "components/Navbar";
+import { ReactComponent as MainImage   } from 'assets/Images/main-image.svg'; 
 import ButtonIcon from 'components/ButtonIcon';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-    return (
-     <> 
-       <Navbar/> 
+    return ( 
+        
        <div className="home-container">
             <div className="base-card home-card">
                  <div className="home-content-container">
@@ -14,16 +13,17 @@ const Home = () => {
                      <h1>Conheça o melhor catálogo de produtos</h1>
                      <p>Ajudaremos você a encontrar os melhores produtos disponíveis no mercado.</p>
                      </div>
-                     <ButtonIcon />
+                     <Link to="/products">
+                      <ButtonIcon />
+                     </Link>
+                      
                  </div>
                  <div className="home-image-container">
                       <MainImage />
                  </div>
             </div>
-
-
        </div>
-     </> 
+      
        
     );
   }
